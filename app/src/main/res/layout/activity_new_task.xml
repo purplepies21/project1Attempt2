@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraints"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="155dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="92dp"
+        android:text="@string/what_is_to_be_done"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="16sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/dateImageView"
+        android:layout_width="52dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        android:contentDescription="TODO"
+        android:focusable="true"
+        android:tint="@color/design_default_color_primary_dark"
+        app:layout_constraintEnd_toStartOf="@+id/cleardateImageView"
+        app:layout_constraintStart_toEndOf="@+id/dateEditText"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:srcCompat="@drawable/calendar" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="74dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@null"
+        android:contentDescription="@string/todo"
+        android:scaleType="centerInside"
+        android:tint="@color/design_default_color_primary"
+        app:layout_constraintBottom_toTopOf="@+id/dateEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/taskEditText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_btn_speak_now" />
+
+    <Spinner
+        android:id="@+id/repeatSpinner"
+        android:layout_width="231dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="108dp"
+        android:entries="@array/repeat_array"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeatTextView" />
+
+    <EditText
+        android:id="@+id/taskEditText"
+        android:layout_width="219dp"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_your_task"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/dueDateTextView"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/timeImageView"
+        android:layout_width="49dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:tint="@color/design_default_color_primary_dark"
+        app:layout_constraintEnd_toStartOf="@+id/clearTimeImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/timeEditText"
+        app:layout_constraintTop_toBottomOf="@+id/dateImageView"
+        app:srcCompat="@drawable/time_icon" />
+
+    <EditText
+        android:id="@+id/dateEditText"
+        android:layout_width="238dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/timeEditText"
+        app:layout_constraintEnd_toStartOf="@+id/dateImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dueDateTextView" />
+
+    <ImageView
+        android:id="@+id/cleardateImageView"
+        android:layout_width="53dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="6dp"
+        android:clickable="true"
+        android:tint="@color/design_default_color_primary_dark"
+        app:layout_constraintBottom_toTopOf="@+id/timeImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/clear_icon" />
+
+    <TextView
+        android:id="@+id/repeatTextView"
+        android:layout_width="62dp"
+        android:layout_height="35dp"
+        android:text="@string/repeat"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="16sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/repeatSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeEditText"
+        app:layout_constraintVertical_bias="0.833" />
+
+    <TextView
+        android:id="@+id/dueDateTextView"
+        android:layout_width="163dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/due_date"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="16sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/dateEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskEditText" />
+
+    <EditText
+        android:id="@+id/timeEditText"
+        android:layout_width="231dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/repeatTextView"
+        app:layout_constraintEnd_toStartOf="@+id/timeImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateEditText" />
+
+    <ImageView
+        android:id="@+id/clearTimeImageView"
+        android:layout_width="55dp"
+        android:layout_height="51dp"
+        android:clickable="true"
+        android:contentDescription="TODO"
+        android:tint="@color/design_default_color_primary_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/timeImageView"
+        app:layout_constraintTop_toBottomOf="@+id/cleardateImageView"
+        app:srcCompat="@drawable/clear_icon" />
+
+
+
+</android.support.constraint.ConstraintLayout>

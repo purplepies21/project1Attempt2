@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">project1</string>
+    <string name="what_is_to_be_done">What is to be done?</string>
+    <string name="todo"> </string>
+    <string name="due_date">Due Date </string>
+    <string name="repeat">Repeat </string>
+    <string name="enter_your_task">Enter Your Task</string>
+    <string name="title_activity_main__list_">Main_List_Activity</string>
+
+
+</resources>
